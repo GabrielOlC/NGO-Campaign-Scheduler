@@ -1,0 +1,42 @@
+Attribute VB_Name = "cmFunctions"
+' -------------------------------------------------------------------------
+' Source: ROK app - Excel report V8+
+' Function: vfCopyToClipboard
+' Purpose: Low-level utility to push string data into the MSForms DataObject.
+' Context: Shared utility used across ROK App, ERPM, and automated reporting tools.
+' Requirements: library MSForms.DataObject (Microsoft Forms 2.0 Object Library)
+' -------------------------------------------------------------------------
+Function vfCopyToClipboard(ByVal bvValues As String) As Boolean
+    vfCopyToClipboard = True
+    
+    On Error GoTo ErrHandler
+
+    Dim vClipboardData As New MSForms.DataObject
+    With vClipboardData
+        .SetText bvValues
+        .PutInClipboard
+    End With
+    
+Exit Function
+ErrHandler:
+    Debug.Print "Clipboard Error (vfCopyToClipboard): " & Err.Description
+    vfCopyToClipboard = False
+End Function
+Sub vsSetEnviroment()
+' -----------------------------------------------------------------------------------------
+'
+' -----------------------------------------------------------------------------------------
+    Application.EnableEvents = False
+    Application.ScreenUpdating = False
+    Application.Calculation = xlCalculationManual
+
+End Sub
+Sub vsResetEnviroment()
+' -----------------------------------------------------------------------------------------
+'
+' -----------------------------------------------------------------------------------------
+    Application.EnableEvents = True
+    Application.ScreenUpdating = True
+    Application.Calculation = xlCalculationAutomatic
+    
+End Sub
