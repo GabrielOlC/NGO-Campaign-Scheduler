@@ -3,7 +3,6 @@
 **A VBA-based application to manage high-volume scheduling for animal welfare campaigns, featuring automated slot generation and dynamic communication.**
 
 > **Status:** MVP
-> 
 > **Role:** volunteer
 
 <div align="center">
@@ -92,26 +91,26 @@ To ensure maintainability, the system uses **Object-Oriented** principles:
 /NGO-Campaign-Scheduler
 │
 ├── /.Source Code
-|   ├── /Buttons
-|   |   └── Buttons.bas    # Buttons Event listeners
-|   |
-│   ├── /Classes
-│   │   ├── clRange.cls        # Grid Abstraction Layer
-│   │   ├── clString.cls       # Global String Constants
-|   |   └── vbASchedule.cls    # Worksheet Event listener
-│   │
-│   ├── /Forms
-│   │   ├── fmTransferTokens.frm    # Slot Transfer Interface
-│   │   └── fmTransferTokens.frx    #
-│   │
-│   ├── /Worksheet function & Controllers
-|   |   ├── cm_Buttons.bas             # 
-|   |   ├── cm_fmTransferTokens.bas    #
-|   |   ├── cm_vbASchedule.bas         #
-|   |   ├── cmFunctions.bas            # Universal Functions
-|   |   ├── wf_fmTransferTokens.bas    #    
-|   |   ├── wf_vbASchedule.bas         #
-|   └── Excel Formulas.md    #
+|  ├── /Buttons
+|  |   └── Buttons.bas    # Buttons Event listeners
+|  |
+│  ├── /Classes
+│  │  ├── clRange.cls        # Grid Abstraction Layer
+│  │  ├── clString.cls       # Global String Constants
+|  |  └── vbASchedule.cls    # Worksheet Event listener
+│  │
+│  ├── /Forms
+│  │  ├── fmTransferTokens.frm    # Slot Transfer Interface
+│  │  └── fmTransferTokens.frx    #
+│  │
+│  ├── /Worksheet function & Controllers
+|  |  ├── cm_Buttons.bas             # 
+|  |  ├── cm_fmTransferTokens.bas    #
+|  |  ├── cm_vbASchedule.bas         #
+|  |  ├── cmFunctions.bas            # Universal Functions
+|  |  ├── wf_fmTransferTokens.bas    #    
+|  |  ├── wf_vbASchedule.bas         #
+|  └── Excel Formulas.md    #
 │
 ├── READme
 └── Agendamentos.xlsm.zip    # App
@@ -122,4 +121,4 @@ To ensure maintainability, the system uses **Object-Oriented** principles:
 ## 🚀 Future Roadmap
 
 * **WhatsApp Automation:** Integration with an API to send the generated messages automatically.
-* **Cloud Sync:** Porting the Backend to SharePoint/SQL for multi-user simultaneous editing and deeper integration
+* **Cloud Sync:** Porting the Backend to SharePoint/SQL for multi-user simultaneous editing and deeper integration.
